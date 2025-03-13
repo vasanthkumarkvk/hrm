@@ -1,0 +1,55 @@
+
+/* free registration sign in form */
+.free-registraion-form-page .card-width {
+    width: 49%;
+    border-radius: 13px;
+    box-shadow: -1px 0rem .4rem rgba(0, 0, 0, .15) !important;
+}
+.free-registraion-form-page span.must-typed {
+    color: red;
+    font-size: 16px;
+}
+
+.free-registraion-form-page .form-control {
+    padding: 3px 5px 3px 9px;
+}
+.free-registraion-form-page .form-label {
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.free-registraion-form-page{
+    font-family: "Outfit", sans-serif;
+}
+.free-registraion-form-page button.submit-button {
+    background-color: white;
+    border: 0.5px solid #8181892e;
+    text-align: center;
+    font-size: 19px;
+    border-radius: 4px;
+    padding: 4px 36px;
+}
+.free-registraion-form-page .submit-button {
+    text-align: center;
+    margin: 12px 0px;
+}
+.free-registraion-form-page .google-buttons img {
+    width: 4%;
+}
+.free-registraion-form-page .google-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.free-registraion-form-page .form-control:focus,
+.form-check-input:focus{
+    box-shadow: none;
+}
+.free-registraion-form-page .form-control:hover{
+ border-color: rgb(7, 51, 51);
+}
+.free-registraion-form-page .container {
+    margin-top: 20px;
+}
+.free-registraion-form-page
