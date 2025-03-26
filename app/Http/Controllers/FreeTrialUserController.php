@@ -33,6 +33,6 @@ class FreeTrialUserController extends Controller
             'domain' => $request->domain
         ]);
 
-        return response()->json(['message' => 'Signup successful!'], 201);
+        return response()->json(['Response' => 'Signup successful!'], 201);
     }
 }

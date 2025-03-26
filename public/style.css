@@ -52,4 +52,15 @@
 .free-registraion-form-page .container {
     margin-top: 20px;
 }
-.free-registraion-form-page
+span.validation-icon {
+    padding-top: 4px;
+    position: absolute;
+    right: 5px;
+    z-index: 9;
+}
+div#domain-validate span.validation-icon {
+    padding-top: 7px;
+    position: absolute;
+    right: 143px;
+    z-index: 9;
+}

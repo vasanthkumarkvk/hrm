@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/free-register-form', function () {
     return view('free-register-form');
 });
+
+Route::get('/userlogin/login', function () {
+    return view('userlogin.login');
+});

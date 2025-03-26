@@ -69,7 +69,7 @@
                         <div class="col-md-12">
                         <div class="mb-3">
     <label class="form-label"><span class="must-typed">* </span>Domain</label>
-    <div class="input-group">
+    <div class="input-group" id="domain-validate">
         <span class="input-group-text">http://</span>
         <input type="text" class="form-control" id="domain" required>
         <span class="input-group-text">.maindomain.in</span>
@@ -95,6 +95,24 @@
 
         </div>
     </div>
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Success</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Signup successful!
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ url('/userlogin/login') }}" class="btn btn-primary">OK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Bootstrap JS & Axios -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -201,20 +219,20 @@
     let response = await axios.post('http://127.0.0.1:8000/api/free_user_register', formData);
     console.log("Response:", response); // Debugging
     
-    if (response.status === 200) {
-        errorMessage.innerHTML = `<div class="alert alert-success">Signup successful! Redirecting...</div>`;
-        
+    if (response.status === 201) {
+        // Show the Bootstrap modal
+        let successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        successModal.show();
+
+        // Clear all input fields
         form.reset();
         validationStatus = { email: null, domain: null };
         checkInputs();
-
-        setTimeout(() => {
-            window.location.href = "/dashboard"; // Change as needed
-        }, 2000);
     }
 } catch (error) {
     console.error("Error:", error);
 }
+
     });
 
     checkInputs();
